@@ -1,0 +1,11 @@
+{
+  "name": "projeto-javascript",
+  "version": "1.0.0",
+  "description": "Primeira entrega de JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luanna",
+  "license": "ISC"
+}
