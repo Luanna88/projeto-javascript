@@ -29,26 +29,21 @@ body {
   z-index: 1000;
 }
 
-.navbar .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.navbar .nav-links {
+/* Menu normal para telas grandes */
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-.navbar .nav-links li a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
+.nav-links li a:hover {
   color: #ffb703;
 }
 
@@ -62,7 +57,7 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  height: 90vh;
   background: url("../img/banner2.jpg") no-repeat center center/cover;
   position: relative;
   display: flex;
@@ -101,6 +96,10 @@ section {
   padding: 4rem 2rem;
 }
 
+.sobre {
+  text-align: center;
+}
+
 h2 {
   text-align: center;
   font-size: 2.2rem;
@@ -109,44 +108,96 @@ h2 {
   font-weight: 600;
 }
 
+
+.sobre h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #6615a8;
+  font-weight: 600;
+}
+
 .sobre .equipe {
   display: flex;
-  gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  flex-wrap: nowrap; 
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: visible;
+  transition: all 0.5s ease;
 }
 
 .membro {
-  background: white;
+  background:#8b64ab;
   padding: 1.5rem;
   border-radius: 14px;
   text-align: center;
-  max-width: 240px;
+  width: 240px;
+  min-width: 240px;
   box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative; 
+  flex-shrink: 0;
+  transition: all 0.5s ease;
 }
 
 .membro:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
   box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
 }
 
 .membro img {
-  width: 100%;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 4px solid #415a77;
+  object-fit: cover;
+  transition: all 0.5s ease;
 }
 
 .membro h3 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #0d1b2a;
+  color: #fcf8ff;
 }
 
 .membro p {
   font-size: 0.95rem;
-  color: #555;
+  color: #e4c3ff;
+}
+
+.resumo {
+  position: absolute;
+  top: 0;
+  left: 105%; 
+  width: 0;
+  opacity: 0;
+  background: #f9f9f9;
+  border-left: 5px solid #6615a8;
+  font-style: italic;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 300px;
+  z-index: 2;
+  transition: all 0.5s ease; 
+}
+
+.membro:hover .resumo {
+  width: 280px;
+  padding: 15px;
+  opacity: 1;
+}
+
+
+.resumo p {
+  margin: 5px 0;
 }
 
 .skills .lista-skills {
@@ -170,12 +221,20 @@ h2 {
 }
 
 .skills .lista-skills li:hover {
-  background: #eaf4ff;
+  background: #8b64ab57;
   transform: scale(1.07);
 }
 
 .skills .lista-skills li img {
   width: 32px;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #6615a8;
+  font-weight: 600;
 }
 
 .grid-projetos {
@@ -314,22 +373,89 @@ footer {
   font-size: 0.95rem;
 }
 
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    flex-direction: column;
+    background: #1b263b;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+
   .hamburger {
     display: block;
   }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #1b263b;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 240px;
-    padding: 1.5rem;
-    border-radius: 0 0 12px 12px;
+
+  /* Expande menu ao passar o cursor no ícone */
+  .hamburger:hover + .nav-links,
+  .nav-links:hover {
+    max-height: 500px; /* altura suficiente para mostrar todos os itens */
+    padding: 1rem;
   }
-  .nav-links.active {
-    display: flex;
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Em telas maiores, mantém o menu normal */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipe {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+  }
+
+  .membro {
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  .resumo {
+    position: relative; 
+    top: auto;
+    left: auto;
+    width: 100%;
+    opacity: 1;
+    border-left: none;
+    border-top: 5px solid #6615a8;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 10px;
+    transition: none; 
+  }
+
+  .membro:hover .resumo {
+    width: 100%; 
+    padding: 10px;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre h2 {
+    font-size: 1.6rem;
+  }
+
+  .resumo {
+    max-width: 220px;
+    font-size: 0.85rem;
   }
 }
