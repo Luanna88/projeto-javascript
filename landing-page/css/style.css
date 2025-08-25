@@ -29,7 +29,6 @@ body {
   z-index: 1000;
 }
 
-/* Menu normal para telas grandes */
 .nav-links {
   list-style: none;
   display: flex;
@@ -44,7 +43,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #ffb703;
+  color: #bb4ebb;
 }
 
 .hamburger {
@@ -380,7 +379,7 @@ footer {
     top: 60px;
     right: 2rem;
     flex-direction: column;
-    background: #1b263b;
+    background: #30667781;
     border-radius: 8px;
     overflow: hidden;
     max-height: 0;
