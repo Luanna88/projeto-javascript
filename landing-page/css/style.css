@@ -90,7 +90,6 @@ body {
   margin-bottom: 2rem;
 }
 
-
 section {
   padding: 4rem 2rem;
 }
@@ -106,7 +105,6 @@ h2 {
   color: #ffffff;
   font-weight: 600;
 }
-
 
 .sobre h2 {
   font-size: 2.2rem;
@@ -194,9 +192,28 @@ h2 {
   opacity: 1;
 }
 
-
 .resumo p {
   margin: 5px 0;
+}
+
+.skills {
+  position: relative; 
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  overflow: hidden; 
+  z-index: 0;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/banner2.jpg") no-repeat center center/cover;
+  opacity: 0.1; 
+  z-index: -1; 
 }
 
 .skills .lista-skills {
@@ -217,6 +234,8 @@ h2 {
   align-items: center;
   gap: 0.5rem;
   transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 1.5rem;
+  cursor:pointer
 }
 
 .skills .lista-skills li:hover {
@@ -225,13 +244,14 @@ h2 {
 }
 
 .skills .lista-skills li img {
-  width: 32px;
+  width: 40px;
 }
 
 .skills h2 {
   text-align: center;
   font-size: 2.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-top:-4rem;
   color: #6615a8;
   font-weight: 600;
 }
@@ -290,7 +310,6 @@ h2 {
   border-radius: 8px;
   margin-top: 10px;
 }
-
 
 .contato form {
   display: flex;
@@ -372,7 +391,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* ===== Responsividade ===== */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -393,10 +411,9 @@ footer {
     display: block;
   }
 
-  /* Expande menu ao passar o cursor no ícone */
   .hamburger:hover + .nav-links,
   .nav-links:hover {
-    max-height: 500px; /* altura suficiente para mostrar todos os itens */
+    max-height: 500px; 
     padding: 1rem;
   }
 
@@ -405,7 +422,6 @@ footer {
   }
 }
 
-/* Em telas maiores, mantém o menu normal */
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
@@ -456,5 +472,17 @@ footer {
   .resumo {
     max-width: 220px;
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 2rem 1rem;
   }
 }
