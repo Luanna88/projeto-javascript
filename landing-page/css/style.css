@@ -83,6 +83,18 @@ body {
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer; 
+  color: #fff;
+  -webkit-text-stroke: 0px transparent; 
+}
+
+.hero h2:hover {
+  transform: scale(1.05) translateY(-5px); 
+  color: #6615a8; 
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); 
+    -webkit-text-stroke: 1px #ffffff;
 }
 
 .hero p {
@@ -235,12 +247,14 @@ h2 {
   gap: 0.5rem;
   transition: transform 0.3s ease, background 0.3s ease;
   margin-bottom: 1.5rem;
-  cursor:pointer
+  cursor:pointer;
+  transform-style: preserve-3d; 
 }
 
 .skills .lista-skills li:hover {
   background: #8b64ab57;
   transform: scale(1.07);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); 
 }
 
 .skills .lista-skills li img {
