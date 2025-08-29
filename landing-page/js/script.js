@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
@@ -30,4 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 
+  const imagensProjeto = document.querySelectorAll(".imagens-projeto img");
+
+  imagensProjeto.forEach(img => {
+    img.addEventListener("click", () => {
+      const overlay = document.createElement("div");
+      overlay.classList.add("lightbox-overlay");
+
+      const imagemCompleta = document.createElement("img");
+      imagemCompleta.src = img.src;
+      imagemCompleta.alt = img.alt;
+      imagemCompleta.classList.add("lightbox-img");
+
+      overlay.appendChild(imagemCompleta);
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", () => {
+        document.body.removeChild(overlay);
+      });
+    });
+  });
 });
