@@ -29,6 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   });
 
+const membros = document.querySelectorAll(".membro");
+
+membros.forEach(membro => {
+  membro.addEventListener("click", () => {
+ 
+    const overlay = document.createElement("div");
+    overlay.classList.add("lightbox-overlay");
+
+    const cardClone = membro.cloneNode(true);
+    cardClone.classList.add("lightbox-card");
+
+    overlay.appendChild(cardClone);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener("click", () => {
+      document.body.removeChild(overlay);
+    });
+  });
+});
+
   const imagensProjeto = document.querySelectorAll(".imagens-projeto img");
 
   imagensProjeto.forEach(img => {
