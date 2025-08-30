@@ -28,5 +28,23 @@ A página apresenta informações sobre mim, minhas habilidades, projetos e form
 
 ---
 
-## 📂 Estrutura do Projeto
+
+## 📸 Demonstração das Seções
+
+### 🔹 Hero  
+Imagem de destaque com chamada para ação.  
+
+### 🔹 Sobre Mim  
+Card com foto, nome, título e resumo.  
+
+### 🔹 Skills  
+Lista interativa com tecnologias que domino.  
+
+### 🔹 Projetos  
+Cards com descrição, imagens (com efeito de lightbox) e link para o repositório.  
+
+### 🔹 Contato  
+Formulário funcional + ícones de redes sociais.  
+
+---
 
