@@ -28,7 +28,6 @@ A página apresenta informações sobre mim, minhas habilidades, projetos e form
 
 ---
 
-
 ## 📸 Demonstração das Seções
 
 ### 🔹 Hero  
@@ -47,4 +46,6 @@ Cards com descrição, imagens (com efeito de lightbox) e link para o repositór
 Formulário funcional + ícones de redes sociais.  
 
 ---
-
+## 🌐 Links Importantes  
+- 📂 [Repositório Público](https://github.com/Luanna88/projeto-javascript)  
+- 🚀 [Site no GitHub Pages](https://luanna88.github.io/projeto-javascript/)  
