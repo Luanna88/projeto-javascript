@@ -481,8 +481,6 @@ h2 {
   transform: scale(1.02);
 }
 
-
-
 .contato form {
   display: flex;
   flex-direction: column;
@@ -497,7 +495,7 @@ h2 {
 
 .contato label {
   font-weight: 500;
-  color: #1b263b;
+  color: #681BA7;
 }
 
 .contato input, .contato textarea {
@@ -510,13 +508,13 @@ h2 {
 }
 
 .contato input:focus, .contato textarea:focus {
-  border: 1px solid #415a77;
+  border: 1px solid #681BA7;
   outline: none;
 }
 
 .contato button {
   padding: 0.9rem;
-  background: #415a77;
+  background: #681BA7;
   color: white;
   border: none;
   border-radius: 8px;
@@ -527,9 +525,48 @@ h2 {
 }
 
 .contato button:hover {
-  background: #ffb703;
-  color: #1b263b;
+  background: #b77de7;
+  color: #681BA7;
   transform: scale(1.05);
+}
+
+.redes-sociais {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.redes-sociais h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #681BA7;
+}
+
+.redes-sociais .icones {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.redes-sociais a {
+  font-size: 2rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociais a.instagram {
+  color: #e1306c;
+}
+
+.redes-sociais a.linkedin {
+  color: #0a66c2;
+}
+
+.redes-sociais a.facebook {
+  color: #1877f2;
+}
+
+.redes-sociais a:hover {
+  transform: scale(1.2);
 }
 
 #backToTop {
@@ -537,7 +574,7 @@ h2 {
   bottom: 25px;
   right: 25px;
   display: none;
-  background: #1b263b;
+  background: #681BA7;
   color: #fff;
   border: none;
   padding: 14px 18px;
@@ -549,15 +586,15 @@ h2 {
 }
 
 #backToTop:hover {
-  background: #ffb703;
-  color: #1b263b;
+  background: #b77de7;
+  color: #681BA7;
   transform: scale(1.1);
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  background: #0d1b2a;
+  background: #538ece;
   color: #fff;
   margin-top: 2rem;
   font-size: 0.95rem;
